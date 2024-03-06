@@ -60,14 +60,14 @@ const AuthRootComponent: React.FC = (): JSX.Element => {
             <form className='form' onSubmit={handleSubmit}>
                 <Box
                     display='flex'
-                    justifyContent='center'
-                    alignItems='center'
+                    justifyContent='left'
+                    alignItems='left'
                     flexDirection='column'
                     maxWidth={640}
-                    margin='auto'
-                    padding={5}
-                    borderRadius={5}
-                    boxShadow={'5px 5px 10px #ccc'}
+                    //margin='auto'
+                    //padding={5}
+                    //borderRadius={5}
+                    //boxShadow={'5px 5px 10px #ccc'}
                 >
                     {
                         location.pathname === '/login'
