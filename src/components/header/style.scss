@@ -1,0 +1,61 @@
+.Header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-height: 80px;
+    background-color: #50735F;
+
+    .header_logo:hover {
+        opacity: (1);
+    }
+
+    .header_logo {
+        opacity: (0.8);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        margin-left: 44px;
+    }
+
+    .header_logo span {
+        color: white;
+        text-align: left;
+        margin-left: 10px;
+        font-family: 'Alice';
+        font-weight: lighter;
+        font-size: 16px;
+        cursor: default;
+    }
+
+    .header_logo svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header_logo svg path {
+        stroke: white;
+        stroke-width: 1px;
+    }
+
+    .header_navigation {
+        margin-right: 44px;
+    }
+
+    .header_navigation span {
+        opacity: (0.8);
+        font-family: 'Alice';
+        font-weight: lighter;
+        font-size: 14px;
+        color: white;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .header_navigation span:hover {
+        opacity: (1);
+    }
+}
