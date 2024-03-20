@@ -1,0 +1,21 @@
+.MapPage{
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    .MapNavigation{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        margin-left: 14px;
+        margin-top: 11px;
+        margin-right: 46px;
+        margin-bottom: 0px;
+        .MapNavigation_dots{
+            font-family: 'Forum';
+            color: #50735F;
+            margin-left: 42px;
+            margin-top: 11px;
+        }
+    }
+}

@@ -8,6 +8,18 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Header from './components/header';
 import Footer from './components/footer';
+import { YMaps } from '@pbe/react-yandex-maps';
+import { IHideComponent } from './common/types/main';
+
+const HideableFooter = (props: IHideComponent) => {
+  const { location } = props;
+  if (location.match('map')){
+    return null;
+  }
+  return (
+    <Footer/>
+  )
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,9 +28,17 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <Header />
-        <App />
-        <Footer/>
+        <YMaps
+          enterprise
+          query={{
+            apikey: "41494eed-cc9e-454e-9145-44327fbf56d9",
+            ns: "use-load-option",
+            load: "Map,Placemark,control.TypeSelector,control.GeolocationControl,geoObject.addon.balloon",
+          }}>
+          <Header />
+          <App />
+          <HideableFooter location={window.location.pathname} />
+        </YMaps>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
