@@ -6,6 +6,7 @@
     height: 100vh;
     max-height: 80px;
     background-color: #50735F;
+    font-family: 'Alice';
 
     .header_logo:hover {
         opacity: (1);
@@ -19,24 +20,32 @@
         align-items: center;
         margin-right: auto;
         margin-left: 44px;
+        cursor:pointer;
+    }
+    .header_logo_link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+        cursor:pointer;
     }
 
-    .header_logo span {
+    .header_logo_link span {
         color: white;
         text-align: left;
         margin-left: 10px;
         font-family: 'Alice';
         font-weight: lighter;
         font-size: 16px;
-        cursor: default;
     }
 
-    .header_logo svg {
+    .header_logo_link svg {
         width: 32px;
         height: 32px;
     }
 
-    .header_logo svg path {
+    .header_logo_link svg path {
         stroke: white;
         stroke-width: 1px;
     }

@@ -16,7 +16,7 @@ const AuthRootComponent: React.FC = (): JSX.Element => {
     const [firstName, setFirstName] = useState('')
     const [username, setUsername] = useState('')
     const location = useLocation()
-    const dispatch = useAppDispatch()
+    //const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
@@ -27,8 +27,9 @@ const AuthRootComponent: React.FC = (): JSX.Element => {
                     email,
                     password
                 }
-                const user = await instance.post('/auth/login', userData)
-                await dispatch(login(user.data))
+                // Запрос к бекенду
+                //const user = await instance.post('/auth/login', userData)
+                //await dispatch(login(user.data))
                 navigate('/')
 
             } catch (e) {
@@ -43,8 +44,9 @@ const AuthRootComponent: React.FC = (): JSX.Element => {
                         email,
                         password
                     }
-                    const newUser = await instance.post('/auth/register', userData)
-                    await dispatch(login(newUser.data))
+                    // Запрос к бекенду
+                    //const newUser = await instance.post('/auth/register', userData)
+                    //await dispatch(login(newUser.data))
                     navigate('/')
                 } catch (e) {
                     return e

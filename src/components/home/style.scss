@@ -1,0 +1,27 @@
+.Home{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:#50735F;
+    font-family: 'Alice';
+    .Text{
+        width: 1000px;
+        .Text2 {
+            margin: auto;
+            text-align: center;
+            max-width: 500px;
+            font-family: 'Forum';
+        }
+    }
+    .Text h1:nth-child(1){
+        text-align: left;
+        font-size: 96px;
+    }
+    .Text h1:nth-child(2){
+        text-align: right;
+        font-size: 96px;
+    }
+}
