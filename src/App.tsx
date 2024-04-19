@@ -11,6 +11,7 @@ function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/" element={<HomePage />} />
           <Route path="map" element={<MapPage />} />
+          <Route path='create' element={<MapPage/>}/>
         </Route>
         <Route path="login" element={<AuthRootComponent />} />
         <Route path="register" element={<AuthRootComponent />} />

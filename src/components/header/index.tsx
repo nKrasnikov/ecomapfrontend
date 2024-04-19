@@ -1,7 +1,9 @@
 import { Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import './style.scss';
 
 const Header = (): JSX.Element => {
+    const navigate = useNavigate()
     return (
         <div className='Header'>
             <div className='header_logo'>
@@ -16,7 +18,8 @@ const Header = (): JSX.Element => {
                 </Link>
             </div>
             <div className='header_navigation'>
-                <Link underline="none" href='map' ><span>Карта</span></Link>
+                <span onClick={() => navigate('/create')}>Добавить точку</span>
+                <span onClick={() => navigate('/map')}>Карта</span>
                 <span>Наша команда</span>
                 <span>Контакты</span>
                 <Link underline="none" href='login' ><span>Вход</span></Link>

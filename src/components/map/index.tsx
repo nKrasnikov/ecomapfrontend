@@ -1,40 +1,90 @@
-import { Map, Placemark } from '@pbe/react-yandex-maps';
-import { SvgIcon, TextField, ToggleButton } from '@mui/material';
+import { Clusterer, Map, Placemark, YMaps } from '@pbe/react-yandex-maps';
+import MapNavigation from './mapnavigation';
+import { IHideComponent } from '../../common/types/main';
 import './style.scss';
+import MapDotCreate from './mapdotcreate';
+
+var ymapinstance: any
+var placemarkinstance : any
+
+const HideableMapNavigation = (props: IHideComponent) => {
+    const { location } = props;
+    if (location.match('/create')) {
+        return null;
+    }
+    return (
+        <MapNavigation />
+    )
+}
+
+const HideableMapDotCreate = (props: IHideComponent) => {
+    const { location } = props;
+    if (location.match('/create')) {
+        return <MapDotCreate />
+    }
+    return null;
+}
+
+const HideablePlacemark = (props: IHideComponent) => {
+    const { location } = props;
+    if (location.match('/create')) {
+        // placemarkinstance.events.add('drag', function () {
+        //     console.log('О, событие!');
+        // });
+        return (
+            <Placemark
+                instanceRef={placemark => placemarkinstance = placemark}
+                defaultGeometry={ymapinstance.getCenter()}
+                options={{
+                    iconLayout: 'default#imageWithContent',
+                    iconImageHref: "/new_map.svg",
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-15, -44],
+                    draggable: true,
+
+                }}
+            />
+        );
+    }
+    return null;
+}
 
 const MapPage = () => {
     return (
         <div className='MapPage'>
-            <Map
+            <Map id='ymap0' onClick={(event: any) => {
+                const coords = event.get("coords");
+                const ymapRootNode = document.getElementById('ymap0');
+
+            }}
                 width={2400}
                 height={884}
                 defaultState={{ center: [47.212584, 38.916468], zoom: 15, controls: ["typeSelector", "geolocationControl"], }}
+                instanceRef={map => ymapinstance = map}
             >
-                <Placemark
-                    defaultGeometry={[47.212584, 38.916468]}
-                    properties={{
-                        balloonContentBody:
-                            "Здесь будет информация о точке. This is balloon loaded by the Yandex.Maps API module system"
-                    }} />
+                <Clusterer>
+                    <Placemark
+                        defaultGeometry={[47.219999, 38.919999]}
+                        options={{
+                            iconLayout: 'default#imageWithContent',
+                            iconImageHref: "/recycle_map.svg",
+                            iconImageSize: [50, 50],
+                            iconImageOffset: [-15, -44],
+
+                        }}
+                        properties={{
+                            hintContent: "<div><img src='plastic_map.svg' width={5} height={5}/><h3>Точка сдачи пластмассы</h3></div>",
+                            balloonContentHeader: "Точка сбора пластика",
+                            balloonContentBody:
+                                "Здесь будет информация о точке.",
+                            balloonContentFooter: "Здесь можно будет сдать пластик",
+                            iconCaption: "Точка сбора мусора",
+                        }} />
+                    <HideablePlacemark location={window.location.pathname} />
+                </Clusterer>
             </Map>
-            <div className='MapNavigation'>
-                <TextField className='MapNavigation' placeholder='Поиск адреса или пункта' />
-                <div className='MapNavigation_dots'>
-                    <h1>Доступные пункты сдачи</h1>
-                    <ToggleButton
-                        value="check">
-                        <SvgIcon>
-                            <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.1709 4C9.58273 2.83481 10.694 2 12.0002 2C13.3064 2 14.4177 2.83481 14.8295 4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M20.5001 6H3.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M18.8332 8.5L18.3732 15.3991C18.1962 18.054 18.1077 19.3815 17.2427 20.1907C16.3777 21 15.0473 21 12.3865 21H11.6132C8.95235 21 7.62195 21 6.75694 20.1907C5.89194 19.3815 5.80344 18.054 5.62644 15.3991L5.1665 8.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M9.5 11L10 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                                <path d="M14.5 11L14 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                        </SvgIcon>
-                    </ToggleButton>
-                </div>
-            </div>
+            <HideableMapNavigation location={window.location.pathname} />
+            <HideableMapDotCreate location={window.location.pathname} />
         </div>
     );
 };
