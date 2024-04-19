@@ -28,12 +28,12 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <YMaps
+        <YMaps 
           enterprise
           query={{
             apikey: "41494eed-cc9e-454e-9145-44327fbf56d9",
             ns: "use-load-option",
-            load: "Map,Placemark,control.TypeSelector,control.GeolocationControl,geoObject.addon.balloon",
+            load: "package.full",
           }}>
           <Header />
           <App />
