@@ -13,11 +13,11 @@ import { IHideComponent } from './common/types/main';
 
 const HideableFooter = (props: IHideComponent) => {
   const { location } = props;
-  if (location.match('map')){
+  if (location.match('map') || location.match('create')) {
     return null;
   }
   return (
-    <Footer/>
+    <Footer />
   )
 }
 
@@ -35,9 +35,9 @@ root.render(
             ns: "use-load-option",
             load: "package.full",
           }}>
-          <Header />
-          <App />
-          <HideableFooter location={window.location.pathname} />
+            <Header />
+            <App />
+            <HideableFooter location={window.location.pathname} />
         </YMaps>
       </BrowserRouter>
     </Provider>
