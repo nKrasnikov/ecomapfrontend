@@ -2,6 +2,17 @@ import { Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import './style.scss';
 
+const HideableAuthorizationLink = (props: any) => {
+    const { location } = props;
+    const { setAddress } = props;
+    if (true) {//useAuth()
+        return  null;
+    }
+    return (
+        <Link underline="none" href='login' ><span>Вход</span></Link>
+    );
+}
+
 const Header = (): JSX.Element => {
     const navigate = useNavigate()
     return (
@@ -22,7 +33,7 @@ const Header = (): JSX.Element => {
                 <span onClick={() => navigate('/map')}>Карта</span>
                 <span>Наша команда</span>
                 <span>Контакты</span>
-                <Link underline="none" href='login' ><span>Вход</span></Link>
+                <HideableAuthorizationLink></HideableAuthorizationLink>
                 <span>Личный кабинет</span>
             </div>
         </div>
