@@ -101,7 +101,6 @@ const MapPage = () => {
                                 iconImageHref: "/recycle_map.svg",
                                 iconImageSize: [50, 50],
                                 iconImageOffset: [-15, -44],
-
                             }}
                             properties={{
                                 hintContent: "<span><h3>Экопункт \"Чучева\"<br/><h3/> <h4>Точка сбора макулатуры, пластика, жести,<br/>алюминия, одежды.<h4/></span>",

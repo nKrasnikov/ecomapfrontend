@@ -62,7 +62,7 @@ const MapDotCreate = (props: any) => {
     //const {address} = props;
     return (
         <div className='MapNavigation1'>
-            <Button sx={{ ":hover": { backgroundColor: '#50735F' }, backgroundColor: '#50735F', fontFamily: 'Forum', marginTop: 4, marginBottom: 0, marginLeft: 4, width: '18%', minWidth: '200px' }} variant="contained">← Назад к карте</Button>
+            <Button href="/map" sx={{ ":hover": { backgroundColor: '#50735F' }, backgroundColor: '#50735F', fontFamily: 'Forum', marginTop: 4, marginBottom: 0, marginLeft: 4, width: '18%', minWidth: '200px' }} variant="contained">← Назад к карте</Button>
             <div className='MapNavigation_dots'>
                 <h1>Добавить точку</h1>
                 <h3>Наименование точки *</h3>
@@ -308,7 +308,7 @@ const MapDotCreate = (props: any) => {
                     </FormControl>
                 </Box>
             </div>
-            <Button sx={{ "&:hover": { backgroundColor: '#50735F' }, backgroundColor: '#50735F', fontFamily: 'Forum', marginTop: 0, marginBottom: 5, marginLeft: '33%', width: '33%', minWidth: '200px' }} variant="contained">Добавить</Button>
+            <Button href="/create" sx={{ "&:hover": { backgroundColor: '#50735F' }, backgroundColor: '#50735F', fontFamily: 'Forum', marginTop: 0, marginBottom: 5, marginLeft: '33%', width: '33%', minWidth: '200px' }} variant="contained">Добавить</Button>
         </div>
     );
 };
