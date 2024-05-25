@@ -9,7 +9,7 @@ import { useAppDispatch } from '../../utils/hook';
 import { login } from '../../store/slice/auth';
 import {AppErrors} from '../../common/errors';
 
-const AuthRootComponent: React.FC = (): JSX.Element => {
+const AuthRootComponent: React.FC = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [repeatPassword, setRepeatPassword] = useState('')
