@@ -28,21 +28,6 @@ const MapNavigation = () => {
                         <h4 className="point_description"><span>Точка сбора батареек.<br/> Адрес г.Таганрог, ​Мира площадь, 7</span></h4>
                         <h5 className="point_time"><span>Время работы: с 10:00 до 22:00</span></h5>
                     </div>
-                    <div className="point_body">
-                        <h3 className="point_name"><span>ТРЦ "Мармелад"</span></h3>
-                        <h4 className="point_description"><span>Точка сбора батареек.<br/> Адрес г.Таганрог, ​Мира площадь, 7</span></h4>
-                        <h5 className="point_time"><span>Время работы: с 10:00 до 22:00</span></h5>
-                    </div>
-                    <div className="point_body">
-                        <h3 className="point_name"><span>ТРЦ "Мармелад"</span></h3>
-                        <h4 className="point_description"><span>Точка сбора батареек.<br/> Адрес г.Таганрог, ​Мира площадь, 7</span></h4>
-                        <h5 className="point_time"><span>Время работы: с 10:00 до 22:00</span></h5>
-                    </div>
-                    <div className="point_body">
-                        <h3 className="point_name"><span>ТРЦ "Мармелад"</span></h3>
-                        <h4 className="point_description"><span>Точка сбора батареек.<br/> Адрес г.Таганрог, ​Мира площадь, 7</span></h4>
-                        <h5 className="point_time"><span>Время работы: с 10:00 до 22:00</span></h5>
-                    </div>
                 </div>
             </div>
         </div>
