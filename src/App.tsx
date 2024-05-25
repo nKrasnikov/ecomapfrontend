@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<PrivateRoute />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="home" element={<HomePage />} />
           <Route path="map" element={<MapPage />} />
           <Route path='create' element={<MapPage/>}/>
         </Route>
