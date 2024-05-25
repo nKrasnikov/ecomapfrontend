@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ecomap/static/css/main.b4bb1a3a.css",
-    "main.js": "/ecomap/static/js/main.f4046aac.js",
-    "static/js/453.a0310414.chunk.js": "/ecomap/static/js/453.a0310414.chunk.js",
-    "index.html": "/ecomap/index.html",
-    "main.b4bb1a3a.css.map": "/ecomap/static/css/main.b4bb1a3a.css.map",
-    "main.f4046aac.js.map": "/ecomap/static/js/main.f4046aac.js.map",
-    "453.a0310414.chunk.js.map": "/ecomap/static/js/453.a0310414.chunk.js.map"
+    "main.css": "/ecomapfrontend/static/css/main.b4bb1a3a.css",
+    "main.js": "/ecomapfrontend/static/js/main.14b83564.js",
+    "static/js/453.a0310414.chunk.js": "/ecomapfrontend/static/js/453.a0310414.chunk.js",
+    "index.html": "/ecomapfrontend/index.html",
+    "main.b4bb1a3a.css.map": "/ecomapfrontend/static/css/main.b4bb1a3a.css.map",
+    "main.14b83564.js.map": "/ecomapfrontend/static/js/main.14b83564.js.map",
+    "453.a0310414.chunk.js.map": "/ecomapfrontend/static/js/453.a0310414.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b4bb1a3a.css",
-    "static/js/main.f4046aac.js"
+    "static/js/main.14b83564.js"
   ]
 }
