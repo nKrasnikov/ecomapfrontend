@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ecomap/static/css/main.b4bb1a3a.css",
+    "main.js": "/ecomap/static/js/main.f4046aac.js",
+    "static/js/453.a0310414.chunk.js": "/ecomap/static/js/453.a0310414.chunk.js",
+    "index.html": "/ecomap/index.html",
+    "main.b4bb1a3a.css.map": "/ecomap/static/css/main.b4bb1a3a.css.map",
+    "main.f4046aac.js.map": "/ecomap/static/js/main.f4046aac.js.map",
+    "453.a0310414.chunk.js.map": "/ecomap/static/js/453.a0310414.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4bb1a3a.css",
+    "static/js/main.f4046aac.js"
+  ]
+}
